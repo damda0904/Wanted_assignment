@@ -9,21 +9,30 @@ Wanted Lab internship 지원자 이지수(suen0904@gmail.com)
 
 # Version
 
-Python : 3.8.5
-Flask : 2.0.2
-sqlite3 : 3.12.1
+<img src="https://img.shields.io/badge/Python 3.8.5-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+<img src="https://img.shields.io/badge/Flask 2.0.2-000000?style=for-the-badge&logo=Flask&logoColor=white">
+<img src="https://img.shields.io/badge/sqlite 3.12.1-003B57?style=for-the-badge&logo=SQLite3&logoColor=black">
 
 
 # 데이터 베이스 스키마
 
 [Company]
+
 id : integer primary key
+
 company_name_ko : varchar(50) unique
+
 company_name_en : varchar(50) unique
+
 company_name_ja : varchar(50) unique
+
 tag_ko : varchar(50)
+
 tag_en : varchar(50)
+
 tag_ja : varchar(50)
+
+
 
 # 파일 구조
 wanted/
