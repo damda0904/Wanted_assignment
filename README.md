@@ -20,17 +20,25 @@ Wanted Lab internship 지원자 이지수(suen0904@gmail.com)
 
 id : integer primary key
 
-company_name_ko : varchar(50) unique
+[Company_name]
 
-company_name_en : varchar(50) unique
+id : integer primary key
 
-company_name_ja : varchar(50) unique
+company_id : integer foreign key(Company)
 
-tag_ko : varchar(50)
+name : varchar(100)
 
-tag_en : varchar(50)
+language : varchar(10)
 
-tag_ja : varchar(50)
+[Company_tags]
+
+id : integer primary key
+
+company_id : integer foreign key(Company)
+
+tag : varchar(200)
+
+language : varchar(10)
 
 
 
