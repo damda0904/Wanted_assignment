@@ -27,12 +27,12 @@ def set_data():
             db.session.commit()
         f.close()
 
-    return make_response("", 200)
+    return make_response({"message": "success"}, 201)
 
 
 #자동완성 및 검색
-@bp.route('/autoComplete/<string:keyword>/')
-def auto_complete(keyword):
+@bp.route('/search/<string:keyword>/')
+def search(keyword):
 
     #검색쿼리
     keyword_query = "%" + keyword + "%"
@@ -87,4 +87,4 @@ def create():
     db.session.add(company)
     db.session.commit()
 
-    return make_response("Success", 201)
+    return make_response({"message": "Success"}, 201)
