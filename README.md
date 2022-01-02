@@ -67,5 +67,7 @@ wanted/
     └ response : { index : { 'ko' : 한국어 회사명, 'en': 영어 회사명, 'ja': 일본어 회사명 } }, 200
 - POST /create : 새로운 회사 데이터 저장
     
+    └ request : { 'company_ko' : 한국어 회사명, 'company_en' : 영어 회사명, 'company_ja' : 일본어 회사명 } (모든 속성은 선택이다)
+    
     └ response : { "message" : "success" }, 201
     └ response for fail : { "message" : "이미 존재하는 회사입니다." }, 400
