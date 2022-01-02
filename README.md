@@ -62,13 +62,16 @@ wanted/
 - GET /setData : 샘플 데이터 저장
    
     └ response : { "message" : "success" }, 201
-- GET /search/<:keyword> : 자동완성 혹은 검색
+- GET /search?query=<:query> : 자동완성
     
-    └ response : { index : { 'ko' : 한국어 회사명, 'en': 영어 회사명, 'ja': 일본어 회사명 } }, 200
+    └ response : [ { "company" : 회사명 } ], 200
+  
+- GET /companies/<:query> : 검색
+  
+    └ response : { "company_name": 회사명, "tags" : [ 태그 리스트 ] }, 200
+    └ response for fail : 404
 - POST /create : 새로운 회사 데이터 저장
     
-    └ request : { 'company_ko' : 한국어 회사명, 'company_en' : 영어 회사명, 'company_ja' : 일본어 회사명 } (모든 속성은 선택이다)
+    └ request : { 'company_name' : {언어 : 회사명}, 'tags': [ { "tag_name": { 언어 : 태그명 } ] }
     
-    └ response : { "message" : "success" }, 201
-    
-    └ response for fail : { "message" : "이미 존재하는 회사입니다." }, 400
+    └ response : { "company_name" : 회사명, "tags" : [ 태그 리스트 ] }, 201
