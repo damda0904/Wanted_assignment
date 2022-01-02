@@ -16,11 +16,12 @@ Wanted Lab internship 지원자 이지수(suen0904@gmail.com)
 
 # 데이터 베이스 스키마
 
-[Company]
+### Company
 
 id : integer primary key
 
-[Company_name]
+
+### Company_name
 
 id : integer primary key
 
@@ -30,7 +31,8 @@ name : varchar(100)
 
 language : varchar(10)
 
-[Company_tags]
+
+### Company_tags
 
 id : integer primary key
 
